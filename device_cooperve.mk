@@ -21,11 +21,11 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/ramdisk/init.cooperve.sensors.rc:root/init.cooperve.sensors.rc
+    device/samsung/cooperve/ramdisk/init.gt-s5830i.sensors.rc:root/init.gt-s5830i.sensors.rc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
+    frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
 
 # Enable repeatable keys in CWM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -36,9 +36,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Torch
 
-# LDPI assets
-PRODUCT_AAPT_CONFIG := normal mdpi ldpi
+# MDPI assets
+PRODUCT_AAPT_CONFIG := normal mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
+
+$(call inherit-product, device/mdpi-common/mdpi.mk)
 
 # Prebuilt Kernel - DELETE from the package
 ifeq ($(TARGET_PREBUILT_KERNEL),)
