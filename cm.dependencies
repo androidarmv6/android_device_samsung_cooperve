@@ -1,5 +1,8 @@
 [
  {
+   "repository": "android_device_samsung_bcm21553-common",
+   "target_path": "device/samsung/bcm21553-common"
+ }, {
    "repository": "android_hardware_broadcom_brcm_usrlib",
    "target_path": "hardware/broadcom/brcm_usrlib"
  }, {
