@@ -41,13 +41,3 @@ $(call inherit-product, vendor/samsung/cooperve/vendor.mk)
 
 # Add device package overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
-
-# Prebuilt Kernel - DELETE from the package
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/cooperve/prebuilt/kernel
-else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
