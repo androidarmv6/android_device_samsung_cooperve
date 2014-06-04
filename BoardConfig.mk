@@ -32,8 +32,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE		:= 206831616
 #BOARD_LDPI_RECOVERY				:= true
 
 # Prebuilt kernel NOTE: Delete from package
-TARGET_PREBUILT_KERNEL				:= device/samsung/cooperve/prebuilt/kernel
-#TARGET_KERNEL_CONFIG				:= cyanogenmod_cooperve_defconfig
+TARGET_KERNEL_CONFIG				:= cyanogenmod_cooperve_defconfig
 
 # Kernel defines
 BOARD_KERNEL_BASE				:= 0x81600000
