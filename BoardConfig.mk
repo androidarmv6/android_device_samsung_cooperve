@@ -1,3 +1,4 @@
+#
 # Copyright (C) 2009 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,6 +18,9 @@
 # Product-specific compile-time definitions.
 #
 
+# Import the bcm21553-common BoardConfigCommon.mk
+include device/samsung/bcm21553-common/BoardConfigCommon.mk
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR	:= device/samsung/cooperve/bluetooth
 
@@ -34,10 +38,5 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE		:= 206831616
 # Kernel config
 TARGET_KERNEL_CONFIG				:= cyanogenmod_cooperve_defconfig
 
-# Kernel defines
-BOARD_KERNEL_BASE				:= 0x81600000
-BOARD_MKBOOTIMG_ARGS				:= --ramdisk_offset 0x01000000
+# OTA override
 TARGET_OTA_ASSERT_DEVICE			:= cooperve,GT-S5830i,gt-s5830i
-
-# Import the bcm21553-common BoardConfigCommon.mk
-include device/samsung/bcm21553-common/BoardConfigCommon.mk
