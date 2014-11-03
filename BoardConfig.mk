@@ -40,3 +40,6 @@ TARGET_KERNEL_CONFIG				:= cyanogenmod_cooperve_defconfig
 
 # OTA override
 TARGET_OTA_ASSERT_DEVICE			:= cooperve,GT-S5830i,gt-s5830i
+
+# TWRP
+DEVICE_RESOLUTION := 320X480
